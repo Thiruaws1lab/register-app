@@ -9,6 +9,10 @@ pipeline {
             IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
 
     }
+    tools {
+	    jdk 'Java17'
+	    maven 'Maven3'
+    }
     stages{
         stage("Cleanup Workspace"){
                 steps {
